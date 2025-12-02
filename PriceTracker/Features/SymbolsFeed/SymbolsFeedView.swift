@@ -1,15 +1,15 @@
 //
 //  SymbolsFeedView.swift
-//  PriceTracker
+//  learn_websocket
 //
-//  Created by Ivan Shulev on 2.12.25.
+//  Created by Ivan Shulev on 1.12.25.
 //
 
 import SwiftUI
 
 struct SymbolsFeedView: View {
     @EnvironmentObject private var router: NavigationRouter
-    @ObservedObject var viewModel: SymbolsFeedViewModel
+    @StateObject var viewModel: SymbolsFeedViewModel
     
     var body: some View {
         List {
@@ -44,10 +44,10 @@ struct SymbolsFeedView: View {
         })
         .padding()
         .onAppear {
-            viewModel.connect()
+            viewModel.startObservingFeed()
         }
         .onDisappear {
-            viewModel.disconnect()
+            viewModel.stopObservingFeed()
         }
     }
 }

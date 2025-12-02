@@ -1,6 +1,6 @@
 //
 //  FeedRowViewModel.swift
-//  PriceTracker
+//  learn_websocket
 //
 //  Created by Ivan Shulev on 2.12.25.
 //
@@ -22,11 +22,5 @@ struct FeedRowViewModel {
         self.changeImageName = symbolItem.changePercent24H > 0 ? "arrow.up" : "arrow.down"
         self.isUp = symbolItem.changePercent24H > 0
         self.isChanged = isChanged
-    }
-}
-
-private extension Double {
-    func formattedPrice() -> String {
-        return String(format: "$%.2f", self)
     }
 }

@@ -1,8 +1,8 @@
 //
 //  SymbolsFeedViewModel.swift
-//  PriceTracker
+//  learn_websocket
 //
-//  Created by Ivan Shulev on 2.12.25.
+//  Created by Ivan Shulev on 1.12.25.
 //
 
 import Foundation
@@ -66,7 +66,7 @@ class SymbolsFeedViewModel: ObservableObject {
         webSocketClient.isConnected ? "Stop" : "Start"
     }
     
-    private func startObservingFeed() {
+    func startObservingFeed() {
         guard feedCancellable == nil else {
             return
         }
@@ -97,7 +97,7 @@ class SymbolsFeedViewModel: ObservableObject {
             }
     }
     
-    private func stopObservingFeed() {
+    func stopObservingFeed() {
         feedCancellable = nil
     }
     
