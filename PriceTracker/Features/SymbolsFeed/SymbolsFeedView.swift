@@ -15,15 +15,7 @@ struct SymbolsFeedView: View {
         List {
             ForEach(viewModel.rowViewModels, id: \.ticker) { rowViewModel in
                 NavigationLink(value: AppRoute.details(ticker: rowViewModel.ticker)) {
-                    HStack {
-                        Text(rowViewModel.ticker)
-                        Spacer()
-                        Text(rowViewModel.priceFormatted)
-                            .foregroundStyle(rowViewModel.isChanged ? (rowViewModel.isUp ? .green : .red) : .black)
-                        Image(systemName: rowViewModel.changeImageName)
-                            .foregroundStyle(rowViewModel.isUp ? .green : .red)
-                    }
-                    .contentShape(Rectangle())
+                    FeedRowView(rowViewModel: rowViewModel)
                 }
             }
         }
