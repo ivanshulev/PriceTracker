@@ -16,6 +16,7 @@ struct PriceTrackerApp: App {
         WindowGroup {
             NavigationStack(path: $router.path) {
                 container.rootView()
+                    .background(.backgroundPrimary)
                     .environmentObject(router)
                     .navigationDestination(for: AppRoute.self) { route in
                         switch route {

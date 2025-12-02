@@ -16,7 +16,9 @@ struct SymbolDetailsView: View {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading) {
                         Text(viewModel.details.ticker)
+                            .foregroundStyle(.textPrimary)
                         Text(viewModel.details.name)
+                            .foregroundStyle(.textPrimary)
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                     
@@ -24,15 +26,18 @@ struct SymbolDetailsView: View {
                     
                     HStack {
                         Text(viewModel.priceFormatted)
+                            .foregroundStyle(.textPrimary)
                         Image(systemName: viewModel.changeImageName)
                             .foregroundStyle(viewModel.isUp ? .green : .red)
                     }
                 }
                 
                 Text(viewModel.details.description)
+                    .foregroundStyle(.textPrimary)
             }
         }
         .padding()
+        .background(.backgroundPrimary)
         .onAppear {
             viewModel.fetchDetails()
             viewModel.startObservingFeed()

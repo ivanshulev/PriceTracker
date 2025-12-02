@@ -13,11 +13,13 @@ struct FeedRowView: View {
     var body: some View {
         HStack {
             Text(rowViewModel.ticker)
+                .foregroundStyle(.textPrimary)
             Spacer()
             Text(rowViewModel.priceFormatted)
-                .foregroundStyle(rowViewModel.isChanged ? (rowViewModel.isUp ? .green : .red) : .black)
+                .foregroundStyle(rowViewModel.isChanged ? (rowViewModel.isUp ? .green : .red) : .textPrimary)
             Image(systemName: rowViewModel.changeImageName)
                 .foregroundStyle(rowViewModel.isUp ? .green : .red)
         }
+        .background(.clear)
     }
 }

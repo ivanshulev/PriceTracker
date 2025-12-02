@@ -20,7 +20,9 @@ struct SymbolsFeedView: View {
             }
         }
         .listStyle(.plain)
-        .id(UUID())
+        .background(Color.clear)
+        .listRowBackground(Color.clear)
+        .scrollContentBackground(.hidden)
         .toolbar(content: {
             ToolbarItem(placement: .topBarLeading) {
                 Text(viewModel.connectionStatus.iconName)
