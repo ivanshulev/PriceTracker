@@ -1,0 +1,8 @@
+
+syntax = "proto3";
+
+import "SymbolItem.proto";
+
+message SymbolsSnapshot {
+  repeated SymbolItem items = 1;
+}
