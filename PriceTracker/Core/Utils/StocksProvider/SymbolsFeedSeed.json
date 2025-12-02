@@ -1,0 +1,252 @@
+[
+    {
+        "rank": 1,
+        "ticker": "NVDA",
+        "name": "NVIDIA",
+        "market_cap": 4301000000000000,
+        "price": 177,
+        "change_percent_24h": 1.81,
+        "logo": "https://eodhd.com/img/logos/US/NVDA.png",
+        "description": "Nvidia is a leading developer of graphics processing units. Traditionally, GPUs were used to enhance the experience on computing platforms, most notably in gaming applications on PCs. GPU use cases have since emerged as important semiconductors used in artificial intelligence to run large language models. Nvidia not only offers AI GPUs, but also a software platform, Cuda, used for AI model development and training. Nvidia is also expanding its data center networking solutions, helping to tie GPUs together to handle complex workloads."
+    },
+    {
+        "rank": 2,
+        "ticker": "AAPL",
+        "name": "Apple",
+        "market_cap": 4138000000000000,
+        "price": 278.85,
+        "change_percent_24h": 0.47,
+        "logo": "https://eodhd.com/img/logos/US/AAPL.png",
+        "description": "Apple designs a wide variety of consumer electronic devices, including smartphones (iPhone), tablets (iPad), PCs (Mac), smartwatches (Apple Watch), AirPods, and TV boxes (Apple TV), among others. The iPhone makes up the majority of Apple's total revenue. In addition, Apple offers its customers a variety of services such as Apple Music, iCloud, Apple Care, Apple TV+, Apple Arcade, Apple Card, and Apple Pay, among others. Apple's products run internally developed software and semiconductors, and the firm is well known for its integration of hardware, software and services. Apple's products are distributed online as well as through company-owned stores and third-party retailers. The company generates roughly 40% of its revenue from the Americas, with the remainder earned internationally."
+    },
+    {
+        "rank": 3,
+        "ticker": "GOOG",
+        "name": "Alphabet (Google)",
+        "market_cap": 3864000000000000,
+        "price": 320.12,
+        "change_percent_24h": 0.05,
+        "logo": "https://eodhd.com/img/logos/US/GOOG.png",
+        "description": "Google LLC (Google), a subsidiary of Alphabet Inc, is a provider of search and advertising services on the internet. The company's business areas include advertising, search, platforms and operating systems, and enterprise and hardware products."
+    },
+    {
+        "rank": 4,
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "market_cap": 3657000000000000,
+        "price": 492.01,
+        "change_percent_24h": 1.34,
+        "logo": "https://eodhd.com/img/logos/US/MSFT.png",
+        "description": "MSFT, or Microsoft Corporation, is an American multinational technology company that designs, develops, and sells software, consumer electronics, and cloud computing services. Its products include the Windows operating system, Microsoft Office suite, Xbox gaming consoles, and Azure cloud services. The company has shifted its focus towards cloud, AI, and subscription-based services, and operates in segments like Productivity and Business Processes, Intelligent Cloud, and More Personal Computing. "
+    },
+    {
+        "rank": 5,
+        "ticker": "AMZN",
+        "name": "Amazon",
+        "market_cap": 2493000000000000,
+        "price": 233.22,
+        "change_percent_24h": 1.77,
+        "logo": "https://eodhd.com/img/logos/US/AMZN.png",
+        "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates through three segments: North America, International, and Amazon Web Services (AWS). It also manufactures and sells electronic devices, including Kindle, fire tablets, fire TVs, echo, ring, blink, and eero; and develops and produces media content. In addition, the company offers programs that enable sellers to sell their products in its stores; and programs that allow authors, independent publishers, musicians, filmmakers, Twitch streamers, skill and app developers, and others to publish and sell content. Further, it provides compute, storage, database, analytics, machine learning, and other services, as well as advertising services through programs, such as sponsored ads, display, and video advertising. Additionally, the company offers Amazon Prime, a membership program. The company's products offered through its stores include merchandise and content purchased for resale and products offered by third-party sellers. It also provides AgentCore services, such as AgentCore Runtime, AgentCore Memory, AgentCore Observability, AgentCore Identity, AgentCore Gateway, AgentCore Browser, and AgentCore Code Interpreter. It serves consumers, sellers, developers, enterprises, content creators, advertisers, and employees. Amazon.com, Inc. was incorporated in 1994 and is headquartered in Seattle, Washington."
+    },
+    {
+        "rank": 6,
+        "ticker": "AVGO",
+        "name": "Broadcom",
+        "market_cap": 1902000000000000,
+        "price": 402.96,
+        "change_percent_24h": 1.36,
+        "logo": "https://eodhd.com/img/logos/US/AVGO.png",
+        "description": "AVGO, which stands for Broadcom Inc., is a global technology company that designs and supplies a wide range of semiconductor devices and infrastructure software solutions. The company operates through two main segments: Semiconductor Solutions and Infrastructure Software. It is known for products that power modern computing, connectivity, and data center technology, including chips for artificial intelligence (AI)."
+    },
+    {
+        "rank": 7,
+        "ticker": "META",
+        "name": "Meta Platforms (Facebook)",
+        "market_cap": 1633000000000000,
+        "price": 647.95,
+        "change_percent_24h": 2.26,
+        "logo": "https://eodhd.com/img/logos/US/META.png",
+        "description": "A meta description is a short HTML tag that provides a summary of a webpage's content, appearing as a brief snippet under the title in search engine results pages (SERPs). Its main purpose is to convince users to click on your link, making it a crucial tool for increasing click-through rates (CTR) by summarizing the page and using persuasive language. "
+    },
+    {
+        "rank": 8,
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "market_cap": 1430000000000000,
+        "price": 430.17,
+        "change_percent_24h": 0.84,
+        "logo": "https://eodhd.com/img/logos/US/TSLA.png",
+        "description": "Tesla, Inc. is an American multinational automotive and clean energy company that designs, manufactures, and sells electric vehicles (EVs), as well as energy generation and storage systems. Its mission is to accelerate the world's transition to sustainable energy by providing products like solar panels, battery storage (Powerwall and Megapack), and a range of electric cars, which are increasingly integrated with features like 'Full Self-Driving' capability. "
+    },
+    {
+        "rank": 9,
+        "ticker": "BRK-B",
+        "name": "Berkshire Hathaway",
+        "market_cap": 1108000000000000,
+        "price": 513.81,
+        "change_percent_24h": 0.5,
+        "logo": "https://eodhd.com/img/logos/US/BRK-B.png",
+        "description": ""
+    },
+    {
+        "rank": 10,
+        "ticker": "LLY",
+        "name": "Eli Lilly",
+        "market_cap": 964110000000000,
+        "price": 1075,
+        "change_percent_24h": 2.61,
+        "logo": "https://eodhd.com/img/logos/US/LLY.png",
+        "description": "LLY is the stock ticker for Eli Lilly and Company, a global pharmaceutical company that discovers, develops, manufactures, and markets human medicines. It has a strong focus on therapeutic areas such as diabetes, obesity, oncology, immunology, and neuroscience. Key products include Mounjaro and Zepbound (tirzepatide), which are used for type 2 diabetes and weight loss, as well as cancer treatments like Verzenio (abemaciclib) and immunology treatments like Taltz and Olumiant. "
+    },
+    {
+        "rank": 11,
+        "ticker": "WMT",
+        "name": "Walmart",
+        "market_cap": 881910000000000,
+        "price": 110.51,
+        "change_percent_24h": 1.29,
+        "logo": "https://eodhd.com/img/logos/US/WMT.png",
+        "description": "WMT is the stock ticker for Walmart Inc., a technology-powered, omnichannel retailer that helps people save money and live better. The company operates a global network of retail and wholesale stores, clubs, and eCommerce websites, with its business organized into three segments: Walmart U.S., Walmart International, and Sam's Club. "
+    },
+    {
+        "rank": 12,
+        "ticker": "JPM",
+        "name": "JPMorgan Chase",
+        "market_cap": 860890000000000,
+        "price": 313.08,
+        "change_percent_24h": 1.77,
+        "logo": "https://eodhd.com/img/logos/US/JPM.png",
+        "description": "JPM, or JPMorgan Chase & Co., is a multinational financial services firm and the largest bank in the United States, providing a wide range of services including investment and commercial banking, asset management, and financial transaction processing. The company operates globally, serving millions of clients across more than 100 markets and is organized into segments like Consumer & Community Banking, Commercial & Investment Bank, and Asset & Wealth Management."
+    },
+    {
+        "rank": 13,
+        "ticker": "V",
+        "name": "Visa",
+        "market_cap": 649120000000000,
+        "price": 334.44,
+        "change_percent_24h": 0.19,
+        "logo": "https://eodhd.com/img/logos/US/V.png",
+        "description": "A visa is a conditional authorization, often stamped or glued into a passport, that allows a foreigner to legally enter, stay in, or leave a country for a specific purpose and duration. It is granted by the destination country's embassy, consulate, or immigration authority and typically includes restrictions on the allowed length of stay, number of entries, and reason for travel, such as for tourism, study, or work. "
+    },
+    {
+        "rank": 14,
+        "ticker": "ORCL",
+        "name": "Oracle",
+        "market_cap": 575710000000000,
+        "price": 201.95,
+        "change_percent_24h": 1.47,
+        "logo": "https://eodhd.com/img/logos/US/ORCL.png",
+        "description": "ORCL, or Oracle Corporation, is a multinational technology company that provides enterprise information technology products and services, including cloud computing, databases, and business software. Founded in 1977, it is a leading provider of software, hardware, and cloud infrastructure, with a global customer base. "
+    },
+    {
+        "rank": 15,
+        "ticker": "JNJ",
+        "name": "Johnson & Johnson",
+        "market_cap": 498530000000000,
+        "price": 206.92,
+        "change_percent_24h": 0.31,
+        "logo": "https://eodhd.com/img/logos/US/JNJ.png",
+        "description": "JNJ, or Johnson & Johnson, is a multinational healthcare company that operates in pharmaceuticals, biotechnology, medical devices, and diagnostics. As one of the world's largest healthcare companies, it develops and sells a wide range of products, including medicines and consumer brands like Tylenol and Band-Aid. The company is headquartered in New Brunswick, New Jersey, and is publicly traded on the New York Stock Exchange. "
+    },
+    {
+        "rank": 16,
+        "ticker": "MA",
+        "name": "Mastercard",
+        "market_cap": 497680000000000,
+        "price": 550.53,
+        "change_percent_24h": 1.03,
+        "logo": "https://eodhd.com/img/logos/US/MA.png",
+        "description": "Mastercard is a global technology company that facilitates electronic funds transfers through its payment network. It acts as an intermediary between financial institutions, connecting banks, merchants, and consumers to process transactions from branded debit, credit, and prepaid cards. Beyond card processing, Mastercard also provides a range of services, including analytics, security, and payment gateway solutions. "
+    },
+    {
+        "rank": 17,
+        "ticker": "XOM",
+        "name": "Exxon Mobil",
+        "market_cap": 494190000000000,
+        "price": 115.92,
+        "change_percent_24h": 1,
+        "logo": "https://eodhd.com/img/logos/US/XOM.png",
+        "description": "XOM, or ExxonMobil, is a global energy and chemical company involved in the exploration, production, refining, and sale of oil, gas, and petrochemicals. It is one of the world's largest integrated oil and gas companies and operates through segments including Upstream (exploration/production), Energy Products (fuels), Chemical Products, and Specialty Products (lubricants). The company, formerly Standard Oil, was formed by the merger of Exxon and Mobil in 1999 and is headquartered in Spring, Texas. "
+    },
+    {
+        "rank": 18,
+        "ticker": "NFLX",
+        "name": "Netflix",
+        "market_cap": 455850000000000,
+        "price": 107.58,
+        "change_percent_24h": 1.36,
+        "logo": "https://eodhd.com/img/logos/US/NFLX.png",
+        "description": "NFLX, or Netflix, Inc., is a global entertainment company that provides a subscription-based streaming service. It offers a wide variety of TV shows, movies, documentaries, and games across various genres and languages, which members can watch on thousands of internet-connected devices. The company also produces original content, operates in over 190 countries, and is expanding its services to include live programming and advertising. "
+    },
+    {
+        "rank": 19,
+        "ticker": "COST",
+        "name": "Costco",
+        "market_cap": 405150000000000,
+        "price": 913.59,
+        "change_percent_24h": 0.59,
+        "logo": "https://eodhd.com/img/logos/US/COST.png",
+        "description": "Cost is the value of money, time, or effort expended to acquire something, produce a good, or perform a service. In business, it represents the monetary value of resources like materials, labor, and overhead used in production, and is distinct from price, which includes a profit mark-up. Cost can also refer to any expenditure required to achieve a goal, such as the financial, effort, or personal cost of a decision. "
+    },
+    {
+        "rank": 20,
+        "ticker": "ABBV",
+        "name": "AbbVie",
+        "market_cap": 402430000000000,
+        "price": 227.7,
+        "change_percent_24h": 0.02,
+        "logo": "https://eodhd.com/img/logos/US/ABBV.png",
+        "description": "ABBV, or AbbVie Inc., is a global biopharmaceutical company focused on research, development, and sale of medicines and therapies. The company specializes in areas such as immunology, oncology, neuroscience, and eye care, and also has a portfolio of aesthetic products. AbbVie develops and sells products to treat chronic autoimmune diseases, cancer, virology, neurological disorders, and other serious conditions. "
+    },
+    {
+        "rank": 21,
+        "ticker": "PLTR",
+        "name": "Palantir",
+        "market_cap": 401480000000000,
+        "price": 168.45,
+        "change_percent_24h": 1.62,
+        "logo": "https://eodhd.com/img/logos/US/PLTR.png",
+        "description": "Palantir Technologies, Inc. engages in the business of building and deploying software platforms that serve as the central operating systems for its customers."
+    },
+    {
+        "rank": 22,
+        "ticker": "BAC",
+        "name": "Bank of America",
+        "market_cap": 397380000000000,
+        "price": 53.65,
+        "change_percent_24h": 1.25,
+        "logo": "https://eodhd.com/img/logos/US/BAC.png",
+        "description": "Bank of America is a multinational investment bank and financial services holding company that provides a wide range of products and services, including commercial banking, wealth management, and investment banking, to individual consumers, small businesses, and large corporations. It is one of the largest banking institutions in the United States, serving clients through a network of retail financial centers, ATMs, and digital banking platforms, with operations in the U.S. and more than 35 other countries."
+    },
+    {
+        "rank": 23,
+        "ticker": "HD",
+        "name": "Home Depot",
+        "market_cap": 355310000000000,
+        "price": 356.92,
+        "change_percent_24h": 0.41,
+        "logo": "https://eodhd.com/img/logos/US/HD.png",
+        "description": "The Home Depot is an American multinational home improvement retail corporation that sells a wide variety of tools, building materials, and home improvement products. It is the largest home improvement retailer in the United States and operates over 2,300 stores across North America. The company also offers services such as equipment rental and home improvement installation. "
+    },
+    {
+        "rank": 24,
+        "ticker": "AMD",
+        "name": "AMD",
+        "market_cap": 354140000000000,
+        "price": 217.53,
+        "change_percent_24h": 1.54,
+        "logo": "https://eodhd.com/img/logos/US/AMD.png",
+        "description": "Advanced Micro Devices designs a variety of digital semiconductors for markets such as PCs, gaming consoles, data centers (including artificial intelligence), industrial, and automotive applications. AMD's traditional strength was in central processing units and graphics processing units used in PCs and data centers."
+    },
+    {
+        "rank": 25,
+        "ticker": "PG",
+        "name": "Procter & Gamble",
+        "market_cap": 346760000000000,
+        "price": 148.16,
+        "change_percent_24h": 0.06,
+        "logo": "https://eodhd.com/img/logos/US/PG.png",
+        "description": "Procter & Gamble (P&G) is a multinational corporation that manufactures and markets a wide range of household and personal care products, with well-known brands like Tide, Crest, and Pampers. Founded in 1837 in Cincinnati, Ohio, by William Procter and James Gamble, the company has grown into one of the world's largest consumer goods companies, serving billions of consumers globally through categories such as Beauty, Grooming, Health Care, and Fabric & Home Care. "
+    }
+]

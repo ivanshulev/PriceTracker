@@ -1,8 +1,8 @@
 //
 //  Stock.swift
-//  PriceTracker
+//  learn_websocket
 //
-//  Created by Ivan Shulev on 2.12.25.
+//  Created by Ivan Shulev on 1.12.25.
 //
 
 import Foundation
@@ -15,6 +15,7 @@ struct Stock: Codable {
     let price: Double
     let changePercent24h: Double
     let logo: URL
+    let description: String
     
     // Custom coding keys to match JSON field names
     private enum CodingKeys: String, CodingKey {
@@ -25,5 +26,6 @@ struct Stock: Codable {
         case price
         case changePercent24h = "change_percent_24h"
         case logo
+        case description
     }
 }
