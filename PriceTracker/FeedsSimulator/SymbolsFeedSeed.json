@@ -1,0 +1,228 @@
+
+[
+  {
+    "rank": 1,
+    "ticker": "NVDA",
+    "name": "NVIDIA",
+    "market_cap": 4301000000000000,
+    "price": 177.00,
+    "change_percent_24h": 1.81,
+    "logo": "https://eodhd.com/img/logos/US/NVDA.png"
+  },
+  {
+    "rank": 2,
+    "ticker": "AAPL",
+    "name": "Apple",
+    "market_cap": 4138000000000000,
+    "price": 278.85,
+    "change_percent_24h": 0.47,
+    "logo": "https://eodhd.com/img/logos/US/AAPL.png"
+  },
+  {
+    "rank": 3,
+    "ticker": "GOOG",
+    "name": "Alphabet (Google)",
+    "market_cap": 3864000000000000,
+    "price": 320.12,
+    "change_percent_24h": 0.05,
+    "logo": "https://eodhd.com/img/logos/US/GOOG.png"
+  },
+  {
+    "rank": 4,
+    "ticker": "MSFT",
+    "name": "Microsoft",
+    "market_cap": 3657000000000000,
+    "price": 492.01,
+    "change_percent_24h": 1.34,
+    "logo": "https://eodhd.com/img/logos/US/MSFT.png"
+  },
+  {
+    "rank": 5,
+    "ticker": "AMZN",
+    "name": "Amazon",
+    "market_cap": 2493000000000000,
+    "price": 233.22,
+    "change_percent_24h": 1.77,
+    "logo": "https://eodhd.com/img/logos/US/AMZN.png"
+  },
+  {
+    "rank": 6,
+    "ticker": "AVGO",
+    "name": "Broadcom",
+    "market_cap": 1902000000000000,
+    "price": 402.96,
+    "change_percent_24h": 1.36,
+    "logo": "https://eodhd.com/img/logos/US/AVGO.png"
+  },
+  {
+    "rank": 7,
+    "ticker": "META",
+    "name": "Meta Platforms (Facebook)",
+    "market_cap": 1633000000000000,
+    "price": 647.95,
+    "change_percent_24h": 2.26,
+    "logo": "https://eodhd.com/img/logos/US/META.png"
+  },
+  {
+    "rank": 8,
+    "ticker": "TSLA",
+    "name": "Tesla",
+    "market_cap": 1430000000000000,
+    "price": 430.17,
+    "change_percent_24h": 0.84,
+    "logo": "https://eodhd.com/img/logos/US/TSLA.png"
+  },
+  {
+    "rank": 9,
+    "ticker": "BRK-B",
+    "name": "Berkshire Hathaway",
+    "market_cap": 1108000000000000,
+    "price": 513.81,
+    "change_percent_24h": 0.50,
+    "logo": "https://eodhd.com/img/logos/US/BRK-B.png"
+  },
+  {
+    "rank": 10,
+    "ticker": "LLY",
+    "name": "Eli Lilly",
+    "market_cap": 964110000000000,
+    "price": 1075.00,
+    "change_percent_24h": 2.61,
+    "logo": "https://eodhd.com/img/logos/US/LLY.png"
+  },
+  {
+    "rank": 11,
+    "ticker": "WMT",
+    "name": "Walmart",
+    "market_cap": 881910000000000,
+    "price": 110.51,
+    "change_percent_24h": 1.29,
+    "logo": "https://eodhd.com/img/logos/US/WMT.png"
+  },
+  {
+    "rank": 12,
+    "ticker": "JPM",
+    "name": "JPMorgan Chase",
+    "market_cap": 860890000000000,
+    "price": 313.08,
+    "change_percent_24h": 1.77,
+    "logo": "https://eodhd.com/img/logos/US/JPM.png"
+  },
+  {
+    "rank": 13,
+    "ticker": "V",
+    "name": "Visa",
+    "market_cap": 649120000000000,
+    "price": 334.44,
+    "change_percent_24h": 0.19,
+    "logo": "https://eodhd.com/img/logos/US/V.png"
+  },
+  {
+    "rank": 14,
+    "ticker": "ORCL",
+    "name": "Oracle",
+    "market_cap": 575710000000000,
+    "price": 201.95,
+    "change_percent_24h": 1.47,
+    "logo": "https://eodhd.com/img/logos/US/ORCL.png"
+  },
+  {
+    "rank": 15,
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "market_cap": 498530000000000,
+    "price": 206.92,
+    "change_percent_24h": 0.31,
+    "logo": "https://eodhd.com/img/logos/US/JNJ.png"
+  },
+  {
+    "rank": 16,
+    "ticker": "MA",
+    "name": "Mastercard",
+    "market_cap": 497680000000000,
+    "price": 550.53,
+    "change_percent_24h": 1.03,
+    "logo": "https://eodhd.com/img/logos/US/MA.png"
+  },
+  {
+    "rank": 17,
+    "ticker": "XOM",
+    "name": "Exxon Mobil",
+    "market_cap": 494190000000000,
+    "price": 115.92,
+    "change_percent_24h": 1.00,
+    "logo": "https://eodhd.com/img/logos/US/XOM.png"
+  },
+  {
+    "rank": 18,
+    "ticker": "NFLX",
+    "name": "Netflix",
+    "market_cap": 455850000000000,
+    "price": 107.58,
+    "change_percent_24h": 1.36,
+    "logo": "https://eodhd.com/img/logos/US/NFLX.png"
+  },
+  {
+    "rank": 19,
+    "ticker": "COST",
+    "name": "Costco",
+    "market_cap": 405150000000000,
+    "price": 913.59,
+    "change_percent_24h": 0.59,
+    "logo": "https://eodhd.com/img/logos/US/COST.png"
+  },
+  {
+    "rank": 20,
+    "ticker": "ABBV",
+    "name": "AbbVie",
+    "market_cap": 402430000000000,
+    "price": 227.70,
+    "change_percent_24h": 0.02,
+    "logo": "https://eodhd.com/img/logos/US/ABBV.png"
+  },
+  {
+    "rank": 21,
+    "ticker": "PLTR",
+    "name": "Palantir",
+    "market_cap": 401480000000000,
+    "price": 168.45,
+    "change_percent_24h": 1.62,
+    "logo": "https://eodhd.com/img/logos/US/PLTR.png"
+  },
+  {
+    "rank": 22,
+    "ticker": "BAC",
+    "name": "Bank of America",
+    "market_cap": 397380000000000,
+    "price": 53.65,
+    "change_percent_24h": 1.25,
+    "logo": "https://eodhd.com/img/logos/US/BAC.png"
+  },
+  {
+    "rank": 23,
+    "ticker": "HD",
+    "name": "Home Depot",
+    "market_cap": 355310000000000,
+    "price": 356.92,
+    "change_percent_24h": 0.41,
+    "logo": "https://eodhd.com/img/logos/US/HD.png"
+  },
+  {
+    "rank": 24,
+    "ticker": "AMD",
+    "name": "AMD",
+    "market_cap": 354140000000000,
+    "price": 217.53,
+    "change_percent_24h": 1.54,
+    "logo": "https://eodhd.com/img/logos/US/AMD.png"
+  },
+  {
+    "rank": 25,
+    "ticker": "PG",
+    "name": "Procter & Gamble",
+    "market_cap": 346760000000000,
+    "price": 148.16,
+    "change_percent_24h": 0.06,
+    "logo": "https://eodhd.com/img/logos/US/PG.png"
+  }
+]
