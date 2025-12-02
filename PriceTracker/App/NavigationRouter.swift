@@ -10,4 +10,8 @@ import Combine
 
 class NavigationRouter: ObservableObject {
     @Published var path = NavigationPath()
+    
+    func openDetailsFor(ticker: String) {
+        path.append(AppRoute.details(ticker: ticker))
+    }
 }

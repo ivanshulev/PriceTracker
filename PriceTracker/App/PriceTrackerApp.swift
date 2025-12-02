@@ -30,6 +30,17 @@ struct PriceTrackerApp: App {
                 container.webSocketClient.connect()
                 container.feedsSimulator.start()
             }
+            .onOpenURL { url in
+                handleDeepLink(url)
+            }
         }
+    }
+    
+    private func handleDeepLink(_ url: URL) {
+        guard url.scheme?.lowercased() == "stockstrack" else {
+            return
+        }
+        
+        router.openDetailsFor(ticker: url.host ?? "")
     }
 }

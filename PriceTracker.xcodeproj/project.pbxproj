@@ -54,6 +54,7 @@
 			membershipExceptions = (
 				Core/Models/ProtoGenerated/SymbolItem.pb.swift,
 				Core/Models/ProtoGenerated/SymbolsSnapshot.pb.swift,
+				Info.plist,
 			);
 			target = F82685A32EDE6B8F0086BD0D /* PriceTracker */;
 		};
@@ -412,6 +413,7 @@
 				DEVELOPMENT_TEAM = J6QD7ZLQ4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PriceTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,6 +447,7 @@
 				DEVELOPMENT_TEAM = J6QD7ZLQ4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PriceTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

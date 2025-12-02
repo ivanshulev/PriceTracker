@@ -33,7 +33,7 @@ class SymbolDetailsViewModel: ObservableObject {
     }
     
     func fetchDetails() {
-        let stock = symbolDetailsProvider.fetchDetails(ticker: ticker)
+        let stock = symbolDetailsProvider.fetchDetails(ticker: ticker.uppercased())
         
         guard let stock = stock else {
             return
@@ -59,7 +59,6 @@ class SymbolDetailsViewModel: ObservableObject {
                 }
                 
                 guard let item = (snapshot?.items.first { $0.ticker == ticker }) else {
-                    print("!!!! no ticker found")
                     return
                 }
                 
