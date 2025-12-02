@@ -1,14 +1,14 @@
 //
 //  WebSocketClient.swift
-//  PriceTracker
+//  learn_websocket
 //
-//  Created by Ivan Shulev on 2.12.25.
+//  Created by Ivan Shulev on 1.12.25.
 //
 
 import SwiftUI
 import Combine
-import SwiftProtobuf
-import proto_gen
+internal import SwiftProtobuf
+internal import proto_gen
 
 class WebSocketClient: NSObject, ObservableObject, MessageHandler {
     let webSocketURL: URL

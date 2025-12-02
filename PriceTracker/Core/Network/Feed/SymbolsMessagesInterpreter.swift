@@ -1,14 +1,14 @@
 //
 //  SymbolsMessagesInterpreter.swift
-//  PriceTracker
+//  learn_websocket
 //
-//  Created by Ivan Shulev on 2.12.25.
+//  Created by Ivan Shulev on 1.12.25.
 //
 
 import Foundation
 import Combine
-import proto_gen
-import SwiftProtobuf
+internal import proto_gen
+internal import SwiftProtobuf
 
 class SymbolsMessagesInterpreter {
     private let messageHandler: MessageHandler
