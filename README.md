@@ -36,3 +36,5 @@ FeedsSimulator
 
 Utils/StocksProvider
     Loads seed data of stocks which are used for simulating the feed and the symbol details fetches. Loads the data from SymbolsFeedSeed.json
+
+Unit tests and UI tests - included
