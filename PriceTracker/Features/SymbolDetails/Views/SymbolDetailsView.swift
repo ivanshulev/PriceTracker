@@ -45,5 +45,6 @@ struct SymbolDetailsView: View {
         .onDisappear {
             viewModel.stopObservingFeed()
         }
+        .navigationTitle(viewModel.details.ticker)
     }
 }
