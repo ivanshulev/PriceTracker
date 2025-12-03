@@ -8,6 +8,7 @@
 import Foundation
 
 struct FeedRowViewModel {
+    let index: Int
     let symbolItem: SymbolItem
     let ticker: String
     let priceFormatted: String
@@ -15,7 +16,8 @@ struct FeedRowViewModel {
     let isUp: Bool
     var isChanged: Bool
     
-    init(symbolItem: SymbolItem, isChanged: Bool = false) {
+    init(index: Int, symbolItem: SymbolItem, isChanged: Bool = false) {
+        self.index = index
         self.symbolItem = symbolItem
         self.ticker = symbolItem.ticker
         self.priceFormatted = symbolItem.price.formattedPrice()

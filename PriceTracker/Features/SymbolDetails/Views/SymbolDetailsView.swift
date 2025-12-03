@@ -17,8 +17,10 @@ struct SymbolDetailsView: View {
                     VStack(alignment: .leading) {
                         Text(viewModel.details.ticker)
                             .foregroundStyle(.textPrimary)
+                            .accessibilityIdentifier("feed_details_ticker")
                         Text(viewModel.details.name)
                             .foregroundStyle(.textPrimary)
+                            .accessibilityIdentifier("feed_details_name")
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                     
@@ -27,6 +29,7 @@ struct SymbolDetailsView: View {
                     HStack {
                         Text(viewModel.priceFormatted)
                             .foregroundStyle(.textPrimary)
+                            .accessibilityIdentifier("feed_details_price")
                         Image(systemName: viewModel.changeImageName)
                             .foregroundStyle(viewModel.isUp ? .green : .red)
                     }
@@ -34,6 +37,7 @@ struct SymbolDetailsView: View {
                 
                 Text(viewModel.details.description)
                     .foregroundStyle(.textPrimary)
+                    .accessibilityIdentifier("feed_details_description")
             }
         }
         .padding()

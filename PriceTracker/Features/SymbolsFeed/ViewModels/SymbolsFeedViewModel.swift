@@ -91,14 +91,16 @@ class SymbolsFeedViewModel: ObservableObject {
                 
                 self.viewState = .successful
                 
-                self.rowViewModels = (snapshot?.items ?? [])
+                let items = (snapshot?.items ?? [])
                     .sorted(by: { lhs, rhs in
                         lhs.price > rhs.price
                     })
+                
+                self.rowViewModels = items.enumerated()
                     .map {
-                    let isChanged = $0.price != self.rowViewModelsMap[$0.ticker]?.symbolItem.price
-                    return FeedRowViewModel(symbolItem: $0, isChanged: isChanged)
-                }
+                        let isChanged = $0.element.price != self.rowViewModelsMap[$0.element.ticker]?.symbolItem.price
+                        return FeedRowViewModel(index: $0.offset, symbolItem: $0.element, isChanged: isChanged)
+                    }
                 
                 self.rowViewModels.forEach {
                     self.rowViewModelsMap[$0.ticker] = $0

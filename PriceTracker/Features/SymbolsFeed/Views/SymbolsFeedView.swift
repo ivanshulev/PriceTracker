@@ -24,8 +24,10 @@ struct SymbolsFeedView: View {
                         NavigationLink(value: AppRoute.details(ticker: rowViewModel.ticker)) {
                             FeedRowView(rowViewModel: rowViewModel)
                         }
+                        .accessibilityIdentifier("feed_itemRow_\(rowViewModel.index)")
                     }
                 }
+                .accessibilityIdentifier("feed_list")
                 .listStyle(.plain)
                 .background(Color.clear)
                 .listRowBackground(Color.clear)
@@ -35,6 +37,7 @@ struct SymbolsFeedView: View {
         .toolbar(content: {
             ToolbarItem(placement: .topBarLeading) {
                 Text(viewModel.connectionStatus.iconName)
+                    .accessibilityIdentifier("feed_connectionStatusTitle")
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -42,7 +45,9 @@ struct SymbolsFeedView: View {
                     viewModel.toggleFeed()
                 }) {
                     Text(viewModel.feedControlButtonTitle)
+                        .accessibilityIdentifier("feed_toggleButtonTitle")
                 }
+                .accessibilityIdentifier("feed_toggleButton")
             }
         })
         .padding()
