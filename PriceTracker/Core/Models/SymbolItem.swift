@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SymbolItem {
+struct SymbolItem: Hashable {
     public var ticker: String
     public var name: String
     public var price: Double
