@@ -158,3 +158,13 @@ extension WebSocketClient: URLSessionWebSocketDelegate {
         isConnected = false
     }
 }
+
+extension WebSocketClient: WebSocketConnectable {
+    var connectedPublisher: AnyPublisher<Bool, Never> {
+        return $isConnected.eraseToAnyPublisher()
+    }
+    
+    var isConnectedValue: Bool {
+        return isConnected
+    }
+}

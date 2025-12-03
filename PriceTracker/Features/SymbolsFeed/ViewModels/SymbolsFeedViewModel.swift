@@ -10,7 +10,7 @@ import Combine
 
 class SymbolsFeedViewModel: ObservableObject {
     private let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
-    private let webSocketClient: WebSocketClient
+    private let webSocketClient: WebSocketConnectable
     @Published var viewState: ViewState = .inProgress
     @Published var rowViewModels: [FeedRowViewModel] = []
     @Published var connectionStatus: ConnectionStatus = .init(iconName: "🔴")
@@ -31,13 +31,13 @@ class SymbolsFeedViewModel: ObservableObject {
         var iconName: String
     }
     
-    init(symbolsMessagesInterpreter: SymbolsMessagesInterpreter, webSocketClient: WebSocketClient) {
+    init(symbolsMessagesInterpreter: SymbolsMessagesInterpreter, webSocketClient: WebSocketConnectable) {
         self.symbolsMessagesInterpreter = symbolsMessagesInterpreter
         self.webSocketClient = webSocketClient
         
         feedControlButtonTitle = controlButtonTitle
         
-        webSocketClient.$isConnected
+        webSocketClient.connectedPublisher
             .receive(on: DispatchQueue.main)
             .map { isConnectedValue in
                 return isConnectedValue ?  ConnectionStatus(iconName: "🟢") : ConnectionStatus(iconName: "🔴")
@@ -64,7 +64,7 @@ class SymbolsFeedViewModel: ObservableObject {
     }
     
     func toggleFeed() {
-        if webSocketClient.isConnected {
+        if webSocketClient.isConnectedValue {
             webSocketClient.disconnect()
         } else {
             webSocketClient.connect()
@@ -72,7 +72,7 @@ class SymbolsFeedViewModel: ObservableObject {
     }
     
     private var controlButtonTitle: String {
-        webSocketClient.isConnected ? "Stop" : "Start"
+        webSocketClient.isConnectedValue ? "Stop" : "Start"
     }
     
     func startObservingFeed() {

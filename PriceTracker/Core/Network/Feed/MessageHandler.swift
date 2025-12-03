@@ -6,5 +6,9 @@
 //
 
 import Foundation
+import Combine
 
-typealias MessageHandler = MessageSender & MessageReceiver
+protocol MessageHandler {
+    func send(_ message: URLSessionWebSocketTask.Message)
+    var responsePublisher: AnyPublisher<Response, Never> { get }
+}
