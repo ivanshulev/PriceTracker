@@ -25,7 +25,7 @@ class AppContainer: ObservableObject {
         stocksProvider = StocksProvider()
         
         feedsSimulator = FeedsSimulator(symbolsMessagesInterpreter: symbolsMessagesInterpreter,
-                                        stocks: stocksProvider.loadStocks())
+                                        stocksProvider: stocksProvider)
         symbolDetailsProvider = SymbolDetailsProvider(stocks: stocksProvider.loadStocks())
         
         symbolsFeedFeature = SymbolsFeedFeature()

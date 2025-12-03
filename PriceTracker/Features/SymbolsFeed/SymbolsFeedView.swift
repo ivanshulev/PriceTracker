@@ -12,17 +12,26 @@ struct SymbolsFeedView: View {
     @StateObject var viewModel: SymbolsFeedViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.rowViewModels, id: \.ticker) { rowViewModel in
-                NavigationLink(value: AppRoute.details(ticker: rowViewModel.ticker)) {
-                    FeedRowView(rowViewModel: rowViewModel)
+        Group {
+            switch viewModel.viewState {
+            case .inProgress:
+                ProgressView(viewModel.progressStateMessage)
+            case .failure(let message):
+                Text(message)
+            case .successful:
+                List {
+                    ForEach(viewModel.rowViewModels, id: \.ticker) { rowViewModel in
+                        NavigationLink(value: AppRoute.details(ticker: rowViewModel.ticker)) {
+                            FeedRowView(rowViewModel: rowViewModel)
+                        }
+                    }
                 }
+                .listStyle(.plain)
+                .background(Color.clear)
+                .listRowBackground(Color.clear)
+                .scrollContentBackground(.hidden)
             }
         }
-        .listStyle(.plain)
-        .background(Color.clear)
-        .listRowBackground(Color.clear)
-        .scrollContentBackground(.hidden)
         .toolbar(content: {
             ToolbarItem(placement: .topBarLeading) {
                 Text(viewModel.connectionStatus.iconName)

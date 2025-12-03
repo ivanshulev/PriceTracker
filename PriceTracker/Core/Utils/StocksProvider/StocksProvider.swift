@@ -15,6 +15,12 @@ class StocksProvider {
         case invalidData
     }
     
+    func loadStocksAsync() async -> [Stock] {
+        return await Task.detached { [weak self] in
+            await self?.loadStocks() ?? []
+        }.value
+    }
+    
     func loadStocks() -> [Stock] {
         guard let stocks = self.stocks else {
             self.stocks = try? loadStocksFromBundle()

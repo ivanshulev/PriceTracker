@@ -11,12 +11,21 @@ import Combine
 class SymbolsFeedViewModel: ObservableObject {
     private let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
     private let webSocketClient: WebSocketClient
+    @Published var viewState: ViewState = .inProgress
     @Published var rowViewModels: [FeedRowViewModel] = []
     @Published var connectionStatus: ConnectionStatus = .init(iconName: "🔴")
     @Published var feedControlButtonTitle = ""
     private var rowViewModelsMap: [String: FeedRowViewModel] = [:]
     private var cancellables = Set<AnyCancellable>()
     private var feedCancellable: AnyCancellable?
+    
+    let progressStateMessage = "Loading..."
+    
+    enum ViewState {
+        case inProgress
+        case failure(String)
+        case successful
+    }
     
     struct ConnectionStatus {
         var iconName: String
@@ -67,6 +76,8 @@ class SymbolsFeedViewModel: ObservableObject {
     }
     
     func startObservingFeed() {
+        viewState = .inProgress
+        
         guard feedCancellable == nil else {
             return
         }
@@ -77,6 +88,8 @@ class SymbolsFeedViewModel: ObservableObject {
                 guard let self = self else {
                     return
                 }
+                
+                self.viewState = .successful
                 
                 self.rowViewModels = (snapshot?.items ?? [])
                     .sorted(by: { lhs, rhs in

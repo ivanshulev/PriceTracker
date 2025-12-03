@@ -9,26 +9,27 @@ import Foundation
 import Combine
 
 class FeedsSimulator {
-    private let stocks: [Stock]
     private let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
+    private let stocksProvider: StocksProvider
     private let timer = DetachedTimer()
     private let customMode = RunLoop.Mode(rawValue: "com.priceTracker.customMode")
     private var cancellables = Set<AnyCancellable>()
     private var isStarted = false
     private var previousSnapshot: SymbolsSnapshot?
     
-    init(symbolsMessagesInterpreter: SymbolsMessagesInterpreter, stocks: [Stock]) {
-        self.stocks = stocks
+    init(symbolsMessagesInterpreter: SymbolsMessagesInterpreter, stocksProvider: StocksProvider) {
         self.symbolsMessagesInterpreter = symbolsMessagesInterpreter
+        self.stocksProvider = stocksProvider
     }
     
-    func start() {
+    func start() async {
         guard !isStarted else {
             return
         }
         
         isStarted = true
-        setupInitialSnapshot()
+        let stocks = await stocksProvider.loadStocksAsync()
+        setupInitialSnapshot(stocks: stocks)
         
         timer.startTimer(intervalInSeconds: 2) { [weak self] in
             guard let self = self else {
@@ -52,7 +53,7 @@ class FeedsSimulator {
         timer.stop()
     }
     
-    private func setupInitialSnapshot() {
+    private func setupInitialSnapshot(stocks: [Stock]) {
         let symbolsItems = stocks.map { stock in
             return SymbolItem(ticker: stock.ticker,
                               name: stock.name,

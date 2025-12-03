@@ -29,7 +29,9 @@ struct PriceTrackerApp: App {
             }
             .onAppear {
                 container.webSocketClient.connect()
-                container.feedsSimulator.start()
+            }
+            .task {
+                await container.feedsSimulator.start()
             }
             .onOpenURL { url in
                 handleDeepLink(url)
