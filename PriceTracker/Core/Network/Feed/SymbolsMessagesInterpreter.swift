@@ -83,3 +83,11 @@ extension proto_gen.SymbolItem {
                    changePercent24H: self.changePercent24H)
     }
 }
+
+extension SymbolsMessagesInterpreter: MessagesInterpreter {
+    var responsePublisher: AnyPublisher<SymbolsSnapshot, Never> {
+        return $response
+            .compactMap({ $0 })
+            .eraseToAnyPublisher()
+    }
+}

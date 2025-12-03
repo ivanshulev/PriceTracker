@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class SymbolsFeedViewModel: ObservableObject {
-    private let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
+    private let symbolsMessagesInterpreter: MessagesInterpreter
     private let webSocketClient: WebSocketConnectable
     @Published var viewState: ViewState = .inProgress
     @Published var rowViewModels: [FeedRowViewModel] = []
@@ -31,7 +31,7 @@ class SymbolsFeedViewModel: ObservableObject {
         var iconName: String
     }
     
-    init(symbolsMessagesInterpreter: SymbolsMessagesInterpreter, webSocketClient: WebSocketConnectable) {
+    init(symbolsMessagesInterpreter: MessagesInterpreter, webSocketClient: WebSocketConnectable) {
         self.symbolsMessagesInterpreter = symbolsMessagesInterpreter
         self.webSocketClient = webSocketClient
         
@@ -82,7 +82,7 @@ class SymbolsFeedViewModel: ObservableObject {
             return
         }
         
-        feedCancellable = self.symbolsMessagesInterpreter.$response
+        feedCancellable = self.symbolsMessagesInterpreter.responsePublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] snapshot in
                 guard let self = self else {
@@ -91,7 +91,7 @@ class SymbolsFeedViewModel: ObservableObject {
                 
                 self.viewState = .successful
                 
-                let items = (snapshot?.items ?? [])
+                let items = snapshot.items
                     .sorted(by: { lhs, rhs in
                         lhs.price > rhs.price
                     })
