@@ -16,8 +16,8 @@ class DetachedTimer {
         timerTask = Task.detached(priority: .utility) {
             do {
                 while true {
-                    try await Task.sleep(nanoseconds: UInt64(intervalInSeconds) * 1_000_000_000)
                     action()
+                    try await Task.sleep(nanoseconds: UInt64(intervalInSeconds) * 1_000_000_000)
                 }
             } catch {
             }
