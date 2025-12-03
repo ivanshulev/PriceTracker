@@ -40,3 +40,4 @@ Utils/StocksProvider
 Unit tests and UI tests - included
 
 Implemented custom serialization/deserialization of the data. Pushed in separate branch: custom_serialization
+
