@@ -11,7 +11,8 @@ import Combine
 @MainActor
 class AppContainer: ObservableObject {
     let webSocketClient: WebSocketClient
-    let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
+//    let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
+    let customMessagesInterpreter: CustomMessagesInterpreter
     let symbolsFeedFeature: SymbolsFeedFeature
     let symbolDetailsFeature: SymbolDetailsFeature
     
@@ -21,19 +22,20 @@ class AppContainer: ObservableObject {
     
     init() {
         webSocketClient = WebSocketClient(webSocketURL: URL(string: "wss://ws.postman-echo.com/raw")!)
-        symbolsMessagesInterpreter = SymbolsMessagesInterpreter(messageHandler: webSocketClient)
+//        symbolsMessagesInterpreter = SymbolsMessagesInterpreter(messageHandler: webSocketClient)
+        customMessagesInterpreter = CustomMessagesInterpreter(messageHandler: webSocketClient)
         stocksProvider = StocksProvider()
         
-        feedsSimulator = FeedsSimulator(symbolsMessagesInterpreter: symbolsMessagesInterpreter,
+        feedsSimulator = FeedsSimulator(messagesInterpreter: customMessagesInterpreter,
                                         stocksProvider: stocksProvider)
         symbolDetailsProvider = SymbolDetailsProvider(stocks: stocksProvider.loadStocks())
         
         symbolsFeedFeature = SymbolsFeedFeature()
-        symbolDetailsFeature = SymbolDetailsFeature(symbolsMessagesInterpreter: symbolsMessagesInterpreter,
+        symbolDetailsFeature = SymbolDetailsFeature(messagesInterpreter: customMessagesInterpreter,
                                                     symbolDetailsProvider: symbolDetailsProvider)
     }
     
     func rootView() -> some View {
-        symbolsFeedFeature.makeView(symbolsMessagesInterpreter: symbolsMessagesInterpreter, webSocketClient: webSocketClient)
+        symbolsFeedFeature.makeView(messagesInterpreter: customMessagesInterpreter, webSocketClient: webSocketClient)
     }
 }

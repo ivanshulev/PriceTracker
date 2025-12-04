@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class SymbolsFeedViewModel: ObservableObject {
-    private let symbolsMessagesInterpreter: MessagesInterpreter
+    private let messagesInterpreter: MessagesInterpreter
     private let webSocketClient: WebSocketConnectable
     @Published var viewState: ViewState = .inProgress
     @Published var rowViewModels: [FeedRowViewModel] = []
@@ -31,8 +31,8 @@ class SymbolsFeedViewModel: ObservableObject {
         var iconName: String
     }
     
-    init(symbolsMessagesInterpreter: MessagesInterpreter, webSocketClient: WebSocketConnectable) {
-        self.symbolsMessagesInterpreter = symbolsMessagesInterpreter
+    init(messagesInterpreter: MessagesInterpreter, webSocketClient: WebSocketConnectable) {
+        self.messagesInterpreter = messagesInterpreter
         self.webSocketClient = webSocketClient
         
         feedControlButtonTitle = controlButtonTitle
@@ -82,7 +82,7 @@ class SymbolsFeedViewModel: ObservableObject {
             return
         }
         
-        feedCancellable = self.symbolsMessagesInterpreter.responsePublisher
+        feedCancellable = self.messagesInterpreter.responsePublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] snapshot in
                 guard let self = self else {

@@ -8,8 +8,8 @@
 import SwiftUI
 
 public struct SymbolsFeedFeature {
-    func makeView(symbolsMessagesInterpreter: SymbolsMessagesInterpreter, webSocketClient: WebSocketClient) -> some View {
-        SymbolsFeedView(viewModel: SymbolsFeedViewModel(symbolsMessagesInterpreter: symbolsMessagesInterpreter,
+    func makeView(messagesInterpreter: MessagesInterpreter, webSocketClient: WebSocketClient) -> some View {
+        SymbolsFeedView(viewModel: SymbolsFeedViewModel(messagesInterpreter: messagesInterpreter,
                                                         webSocketClient: webSocketClient))
     }
 }
