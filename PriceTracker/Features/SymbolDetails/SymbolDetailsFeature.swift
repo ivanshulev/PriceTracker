@@ -8,18 +8,18 @@
 import SwiftUI
 
 public struct SymbolDetailsFeature {
-    private let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
+    private let messagesInterpreter: MessagesInterpreter
     private let symbolDetailsProvider: SymbolDetailsProvider
     
-    init(symbolsMessagesInterpreter: SymbolsMessagesInterpreter,
+    init(messagesInterpreter: MessagesInterpreter,
          symbolDetailsProvider: SymbolDetailsProvider) {
-        self.symbolsMessagesInterpreter = symbolsMessagesInterpreter
+        self.messagesInterpreter = messagesInterpreter
         self.symbolDetailsProvider = symbolDetailsProvider
     }
     
     func makeView(ticker: String) -> some View {
         let viewModel = SymbolDetailsViewModel(ticker: ticker,
-                                               symbolsMessagesInterpreter: symbolsMessagesInterpreter,
+                                               messagesInterpreter: messagesInterpreter,
                                                symbolDetailsProvider: symbolDetailsProvider)
         return SymbolDetailsView(viewModel: viewModel)
     }

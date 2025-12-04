@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class FeedsSimulator {
-    private let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
+    private let messagesInterpreter: MessagesInterpreter
     private let stocksProvider: StocksProvider
     private let timer = DetachedTimer()
     private let customMode = RunLoop.Mode(rawValue: "com.priceTracker.customMode")
@@ -17,8 +17,8 @@ class FeedsSimulator {
     private var isStarted = false
     private var previousSnapshot: SymbolsSnapshot?
     
-    init(symbolsMessagesInterpreter: SymbolsMessagesInterpreter, stocksProvider: StocksProvider) {
-        self.symbolsMessagesInterpreter = symbolsMessagesInterpreter
+    init(messagesInterpreter: MessagesInterpreter, stocksProvider: StocksProvider) {
+        self.messagesInterpreter = messagesInterpreter
         self.stocksProvider = stocksProvider
     }
     
@@ -39,7 +39,7 @@ class FeedsSimulator {
             self.prepareNextSnapshot()
             
             if let snapshot = self.previousSnapshot {
-                symbolsMessagesInterpreter.send(snapshot)
+                messagesInterpreter.send(snapshot)
             }
         }
     }

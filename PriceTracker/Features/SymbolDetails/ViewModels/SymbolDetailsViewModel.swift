@@ -10,7 +10,7 @@ import Combine
 
 class SymbolDetailsViewModel: ObservableObject {
     private let ticker: String
-    private let symbolsMessagesInterpreter: SymbolsMessagesInterpreter
+    private let messagesInterpreter: MessagesInterpreter
     private let symbolDetailsProvider: SymbolDetailsProvider
     private var feedCancellable: AnyCancellable?
     @Published var priceFormatted: String = ""
@@ -25,10 +25,10 @@ class SymbolDetailsViewModel: ObservableObject {
     }
     
     init(ticker: String,
-         symbolsMessagesInterpreter: SymbolsMessagesInterpreter,
+         messagesInterpreter: MessagesInterpreter,
          symbolDetailsProvider: SymbolDetailsProvider) {
         self.ticker = ticker
-        self.symbolsMessagesInterpreter = symbolsMessagesInterpreter
+        self.messagesInterpreter = messagesInterpreter
         self.symbolDetailsProvider = symbolDetailsProvider
     }
     
@@ -51,14 +51,14 @@ class SymbolDetailsViewModel: ObservableObject {
         
         let ticker = self.ticker
         
-        feedCancellable = self.symbolsMessagesInterpreter.$response
+        feedCancellable = self.messagesInterpreter.responsePublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] snapshot in
                 guard let self = self else {
                     return
                 }
                 
-                guard let item = (snapshot?.items.first { $0.ticker == ticker }) else {
+                guard let item = (snapshot.items.first { $0.ticker == ticker }) else {
                     return
                 }
                 
